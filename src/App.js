@@ -51,16 +51,13 @@ function App() {
     setEditText(text);
   };
 
-  const handleSaveEdit = () => {
-    if (editId !== null && editText.trim() !== '') {
-      // Create a new todo with the edited text
-      setToDos([
-        ...toDos.filter((todo) => todo.id !== editId), // Remove the old todo
-        { id: Date.now(), text: editText, status: false },
-      ]);
-      setEditId(null);
-      setEditText('');
-    }
+  const handleSaveEdit = (id,newText) => {
+     setToDos(toDos.map((toDo)=>{
+        if(toDo.id === id){
+          return{...toDo,text: newText};
+        }
+        return toDo;
+     }))
   };
 
   const handleToggleStatus = (id) => {

@@ -5,6 +5,7 @@ function TodoItem({ todo, onToggle, onDelete, onEdit, onSaveEdit }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(todo.text);
 
+
   const handleSave = () => {
     onSaveEdit(todo.id, editText);
     setIsEditing(false);
@@ -26,7 +27,7 @@ function TodoItem({ todo, onToggle, onDelete, onEdit, onSaveEdit }) {
               value={editText}
               onChange={(e) => setEditText(e.target.value)}
             />
-            <button className="save-button" onClick={handleSave}>Add New</button>
+            <button className="save-button" onClick={handleSave}>save</button>
           </>
         ) : (
           <>

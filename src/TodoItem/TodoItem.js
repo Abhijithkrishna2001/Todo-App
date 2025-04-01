@@ -10,6 +10,9 @@ function TodoItem({ todo, onToggle, onDelete, onEdit, onSaveEdit }) {
     onSaveEdit(todo.id, editText);
     setIsEditing(false);
   };
+  const handleDeleteClick = () => {
+    onDelete(todo.id);
+  };
 
   return (
     <div className="todo">
@@ -39,7 +42,7 @@ function TodoItem({ todo, onToggle, onDelete, onEdit, onSaveEdit }) {
         )}
       </div>
       <div className="right">
-        <i className="fas fa-times delete-icon" onClick={() => onDelete(todo.id)}></i>
+        <i className="fas fa-times delete-icon" onClick={()=>onDelete(todo.id)}></i>
       </div>
     </div>
   );

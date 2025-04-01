@@ -1,0 +1,44 @@
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .todo .left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .todo .left input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .todo .left .todo-text {
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .todo .left .edit-input {
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-right: 5px;
+  }
+  
+  .todo .left .edit-button,
+  .todo .left .save-button {
+      background-color: #008CBA;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 5px;
+  }
+  
+  .todo .right .delete-icon {
+    color: red;
+    cursor: pointer;
+  }
